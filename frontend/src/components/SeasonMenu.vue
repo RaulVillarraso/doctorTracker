@@ -14,7 +14,7 @@
         >
         <div class="flex gap-3 m-2">
           <input type="checkbox"/>
-          <p>{{ episode }}</p>
+          <p>{{ episode.name }}</p>
         </div>
       </div>
     </div>

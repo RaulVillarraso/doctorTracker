@@ -8,7 +8,6 @@
 
   const handleSeasons = async () => {
     seasons.value = await getSeasons()
-    console.log(seasons._rawValue)
   }
 
     onBeforeMount(async () => {

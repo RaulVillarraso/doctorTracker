@@ -31,7 +31,7 @@
   const props = defineProps({
   seasonCount: String,
   episodes: Array,
-  seasonId: Object,
+  seasonId: String,
   })
 
 </script>

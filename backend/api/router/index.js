@@ -1,7 +1,11 @@
 const router = require("express").Router();
 
-const userRouter = require("./season.router")
+const authRouter = require("./auth.router")
+const seasonRouter = require("./season.router")
+const userRouter = require("./user.router")
 
-router.use("/seasons", userRouter);
+router.use("/auth", authRouter)
+router.use("/seasons", seasonRouter)
+router.use("/user", userRouter)
 
 module.exports = router;

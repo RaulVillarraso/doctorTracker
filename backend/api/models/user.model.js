@@ -7,5 +7,5 @@ const userSchema = new Schema({
   password: String,
 });
 
-const Season = mongoose.model('Season', seasonSchema);
-module.exports = Season;
+const User = mongoose.model('User', userSchema);
+module.exports = User;

@@ -3,6 +3,7 @@
   import MainHeader from './components/MainHeader.vue'
   import SeasonMenu from './components/SeasonMenu.vue'
   import { getSeasons } from './service/seriesService'
+import SeasonView from './views/SeasonView.vue';
 
   const seasons = ref([])
 
@@ -22,16 +23,7 @@
 
 <template>
   <div id="app" class="w-screen flex flex-col items-center bg-lblue-tardis">
-    <MainHeader />
-    <div class="w-full flex flex-col items-center overflow-y-auto">
-      <SeasonMenu 
-        v-for="season in seasons" 
-        :key="season._id" 
-        :seasonCount="season.seasonCount"
-        :seasonId="season._id"
-        :episodes="season.episodes" 
-      />
-    </div>
+    <SeasonView />
   </div>
 </template>
 

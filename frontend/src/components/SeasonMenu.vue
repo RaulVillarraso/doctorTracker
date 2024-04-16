@@ -13,7 +13,7 @@
         :key=idx 
         >
         <div class="flex gap-3 m-2">
-          <input type="checkbox"/>
+          <input type="checkbox" @change="handleWatch(seasonId, parseInt(episode.name.slice(0, 2)))" :checked="episode.watched"/>
           <p>{{ episode.name }}</p>
         </div>
       </div>
@@ -22,10 +22,16 @@
 </template>
 
 <script setup>
+  import { checkWatched } from '../service/seriesService';
+
+  const handleWatch = async (id, episode) => {
+    await checkWatched(id, episode)
+  }
 
   const props = defineProps({
   seasonCount: String,
-  episodes: Array
+  episodes: Array,
+  seasonId: Object,
   })
 
 </script>

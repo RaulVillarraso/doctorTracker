@@ -28,7 +28,8 @@
       <SeasonMenu 
         v-for="season in seasons" 
         :key="season._id" 
-        :seasonCount="season.seasonCount" 
+        :seasonCount="season.seasonCount"
+        :seasonId="season._id"
         :episodes="season.episodes" 
       />
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-1/3 h-2/6 bg-blue-tardis flex flex-col text-light-tardis rounded-xl items-center justify-center gap-7">
+  <div class="h-2/6 bg-blue-tardis flex flex-col text-light-tardis rounded-xl items-center justify-center gap-7">
     <h2 class="text-2xl justify-self-start">Login</h2>
     <div class="flex flex-col w-full gap-3 items-center justify-start">
       <label className="input input-bordered flex items-center gap-2 w-11/12">

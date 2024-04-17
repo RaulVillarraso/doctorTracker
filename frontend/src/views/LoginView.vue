@@ -24,7 +24,6 @@ const email = ref("")
 const password = ref("")
 
 const onLogin = async () => {
-  console.log(email, password)
   await login({email: email.value, password: password.value})
   router.push('/seasons')
 }

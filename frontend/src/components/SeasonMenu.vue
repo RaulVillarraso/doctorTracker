@@ -1,18 +1,18 @@
 <template>
-  <div class="collapse bg-base-200 w-2/3 m-5">
-    <input name="seasons" type="checkbox" class="peer" />
+  <div className="collapse bg-base-200 w-2/3 m-5">
+    <input name="seasons" type="checkbox" className="peer" />
     <div
-      class="collapse-title bg-dblue-tardis text-light-tardis peer-checked:bg-blue-tardis peer-checked:text-light-tardis">
+      className="collapse-title bg-dblue-tardis text-light-tardis peer-checked:bg-blue-tardis peer-checked:text-light-tardis">
       {{ seasonCount }}
     </div>
     <div
-      class="collapse-content bg-blue-tardis text-light-tardis peer-checked:bg-blue-tardis peer-checked:text-light-tardis"
+      className="collapse-content bg-blue-tardis text-light-tardis peer-checked:bg-blue-tardis peer-checked:text-light-tardis"
       >
       <div 
         v-for="(episode, idx) in episodes"
         :key=idx 
         >
-        <div class="flex gap-3 m-2">
+        <div className="flex gap-3 m-2">
           <input type="checkbox" @change="handleWatch(seasonId, parseInt(episode.name.slice(0, 2)))" :checked="episode.watched"/>
           <p>{{ episode.name }}</p>
         </div>
@@ -31,7 +31,7 @@
   const props = defineProps({
   seasonCount: String,
   episodes: Array,
-  seasonId: String,
+  seasonId: String
   })
 
 </script>

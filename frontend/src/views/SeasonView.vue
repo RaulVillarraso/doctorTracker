@@ -1,7 +1,6 @@
 <template>
   <div class="w-full">
-    <MainHeader />
-    <div class="w-full flex flex-col items-center overflow-y-auto">
+    <div class="w-full absolute top-36 flex flex-col items-center">
       <SeasonMenu 
         v-for="season in seasons" 
         :key="season._id" 
@@ -15,10 +14,10 @@
 
 <script setup>
   import { onBeforeMount, ref } from 'vue';
-  import MainHeader from './../components/MainHeader.vue'
   import SeasonMenu from './../components/SeasonMenu.vue'
   import { getSeasons } from './../service/seriesService'
 
+  const lol = 0
   const seasons = ref([])
 
   const handleSeasons = async () => {
@@ -35,6 +34,6 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>
